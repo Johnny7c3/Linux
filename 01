@@ -1,3 +1,12 @@
 #!/bin/bash
 
+IFS=$":"
 
+for x1 in $PATH; do
+	echo "$x1:"
+	for x2 in $x1/*; do
+		if [ -x $x2 ]; then
+			echo "  $x2"
+		fi
+	done
+done
