@@ -1,0 +1,14 @@
+!#/bin/bash
+
+x1=( echo $PATH | sed 's/:/ /g' )
+
+x2=0
+
+for x3 in $x1; do
+	x4=$( ls $x3 )
+	for x5 in $x4; do
+		x2=$(( $x2 + 1 ))
+	done
+	echo "$x3 - $x2"
+	x2=0
+done
