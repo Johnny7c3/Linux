@@ -1,4 +1,4 @@
-!#/bin/bash
+#!/bin/bash
 
 x1=( echo $PATH | sed 's/:/ /g' )
 
